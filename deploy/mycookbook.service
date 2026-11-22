@@ -1,0 +1,22 @@
+[Unit]
+Description=MyCookBook personal recipe manager
+After=network.target
+
+[Service]
+Type=simple
+User=cookbook
+Group=cookbook
+WorkingDirectory=/opt/mycookbook
+EnvironmentFile=/opt/mycookbook/.env
+ExecStart=/opt/mycookbook/.venv/bin/gunicorn --config gunicorn.conf.py wsgi:app
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/mycookbook/instance
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

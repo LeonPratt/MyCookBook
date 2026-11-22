@@ -1,0 +1,231 @@
+{
+  "$defs": {
+    "Ingredient": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "quantity": {
+          "anyOf": [
+            {
+              "maximum": 1000000000.0,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Quantity"
+        },
+        "unit": {
+          "default": "",
+          "maxLength": 60,
+          "title": "Unit",
+          "type": "string"
+        },
+        "preparation": {
+          "default": "",
+          "maxLength": 300,
+          "title": "Preparation",
+          "type": "string"
+        },
+        "optional": {
+          "default": false,
+          "title": "Optional",
+          "type": "boolean"
+        },
+        "group": {
+          "default": "",
+          "maxLength": 100,
+          "title": "Group",
+          "type": "string"
+        },
+        "category": {
+          "default": "Other",
+          "maxLength": 100,
+          "title": "Category",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name"
+      ],
+      "title": "Ingredient",
+      "type": "object"
+    },
+    "Step": {
+      "additionalProperties": false,
+      "properties": {
+        "text": {
+          "maxLength": 10000,
+          "minLength": 1,
+          "title": "Text",
+          "type": "string"
+        },
+        "timer_seconds": {
+          "anyOf": [
+            {
+              "maximum": 86400,
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Timer Seconds"
+        }
+      },
+      "required": [
+        "text"
+      ],
+      "title": "Step",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "title": {
+      "maxLength": 200,
+      "minLength": 1,
+      "title": "Title",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "maxLength": 10000,
+      "title": "Description",
+      "type": "string"
+    },
+    "servings": {
+      "default": 2,
+      "exclusiveMinimum": 0,
+      "maximum": 1000,
+      "title": "Servings",
+      "type": "number"
+    },
+    "prep_time": {
+      "default": 0,
+      "maximum": 10080,
+      "minimum": 0,
+      "title": "Prep Time",
+      "type": "integer"
+    },
+    "cook_time": {
+      "default": 0,
+      "maximum": 10080,
+      "minimum": 0,
+      "title": "Cook Time",
+      "type": "integer"
+    },
+    "total_time": {
+      "anyOf": [
+        {
+          "maximum": 20160,
+          "minimum": 0,
+          "type": "integer"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Total Time"
+    },
+    "difficulty": {
+      "default": "Easy",
+      "enum": [
+        "Easy",
+        "Medium",
+        "Hard"
+      ],
+      "title": "Difficulty",
+      "type": "string"
+    },
+    "cuisine": {
+      "default": "",
+      "maxLength": 100,
+      "title": "Cuisine",
+      "type": "string"
+    },
+    "category": {
+      "default": "",
+      "maxLength": 100,
+      "title": "Category",
+      "type": "string"
+    },
+    "tags": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Tags",
+      "type": "array"
+    },
+    "ingredients": {
+      "items": {
+        "$ref": "#/$defs/Ingredient"
+      },
+      "maxItems": 500,
+      "minItems": 1,
+      "title": "Ingredients",
+      "type": "array"
+    },
+    "instructions": {
+      "items": {
+        "$ref": "#/$defs/Step"
+      },
+      "maxItems": 200,
+      "minItems": 1,
+      "title": "Instructions",
+      "type": "array"
+    },
+    "equipment": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Equipment",
+      "type": "array"
+    },
+    "equipment_alternatives": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 50,
+      "title": "Equipment Alternatives",
+      "type": "array"
+    },
+    "image_path": {
+      "default": "",
+      "maxLength": 500,
+      "title": "Image Path",
+      "type": "string"
+    },
+    "source": {
+      "default": "",
+      "maxLength": 2000,
+      "title": "Source",
+      "type": "string"
+    },
+    "demo": {
+      "default": false,
+      "title": "Demo",
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "title",
+    "ingredients",
+    "instructions"
+  ],
+  "title": "RecipeInput",
+  "type": "object"
+}

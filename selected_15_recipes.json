@@ -1,0 +1,1726 @@
+{
+  "schema_version": "1.0",
+  "collection_name": "ChatGPT Recipe Collection — Selected 15",
+  "notes": "Reconstructed entries are flagged in source.fidelity. Ingredients were adjusted or inferred where original messages could not be recovered. Quantities are base quantities for default_servings; cooking times and instructions must not scale.",
+  "recipes": [
+    {
+      "id": "sticky-garlic-black-pepper-chicken-noodles",
+      "title": "Sticky Garlic & Black Pepper Chicken Noodles",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "noodles",
+      "tags": [
+        "chicken",
+        "Asian-inspired",
+        "sticky",
+        "quick"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 200,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "ready-to-wok egg noodles",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 75,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "red pepper",
+          "quantity": 75,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "garlic",
+          "quantity": 4,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "light soy sauce",
+          "quantity": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "dark soy sauce",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "sriracha",
+          "quantity": 7.5,
+          "unit": "ml"
+        },
+        {
+          "name": "brown sugar",
+          "quantity": 2,
+          "unit": "g"
+        },
+        {
+          "name": "water",
+          "quantity": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "ground black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Mix the soy sauces, oyster sauce, sriracha, sugar and water in a small bowl."
+        },
+        {
+          "step": 2,
+          "instruction": "Heat oil in a frying pan over medium-high heat (about 7/9 induction). Fry chicken for 5–6 minutes until browned and cooked through."
+        },
+        {
+          "step": 3,
+          "instruction": "Add onion and pepper; fry for 3 minutes. Lower the heat slightly and add garlic for the final minute."
+        },
+        {
+          "step": 4,
+          "instruction": "Pour in sauce and simmer for 1–2 minutes until glossy."
+        },
+        {
+          "step": 5,
+          "instruction": "Add ready-to-wok noodles and toss for 2–3 minutes until heated and evenly coated."
+        },
+        {
+          "step": 6,
+          "instruction": "Turn off heat, add sesame oil and black pepper, and serve."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 1
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "sticky-mcdonald-s-szechuan-chicken-noodles",
+      "title": "Sticky McDonald's Szechuan Chicken Noodles",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "noodles",
+      "tags": [
+        "chicken",
+        "Szechuan",
+        "sticky",
+        "quick"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 170,
+          "unit": "g",
+          "preparation": "thinly sliced"
+        },
+        {
+          "name": "dry egg noodles",
+          "quantity": 100,
+          "unit": "g"
+        },
+        {
+          "name": "McDonald’s Szechuan dipping sauce",
+          "quantity": 40,
+          "unit": "g"
+        },
+        {
+          "name": "light soy sauce",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "onion",
+          "quantity": 60,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "red pepper",
+          "quantity": 75,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "water",
+          "quantity": 30,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Cook the noodles according to the packet and drain."
+        },
+        {
+          "step": 2,
+          "instruction": "Mix the Szechuan sauce, soy sauce, oyster sauce and water."
+        },
+        {
+          "step": 3,
+          "instruction": "Heat oil in a frying pan over medium-high heat. Stir-fry chicken for 5–6 minutes until cooked through."
+        },
+        {
+          "step": 4,
+          "instruction": "Add onion and pepper; cook 3 minutes, then garlic for 30 seconds."
+        },
+        {
+          "step": 5,
+          "instruction": "Add noodles and sauce; toss for 1–2 minutes until the glaze clings to everything."
+        },
+        {
+          "step": 6,
+          "instruction": "Finish with sesame oil and serve immediately."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 2
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "korean-style-sticky-chicken-with-rice",
+      "title": "Korean-Style Sticky Chicken with Rice",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 20,
+      "difficulty": "easy",
+      "category": "rice",
+      "tags": [
+        "chicken",
+        "Korean-inspired",
+        "sticky"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 190,
+          "unit": "g",
+          "preparation": "bite-sized pieces"
+        },
+        {
+          "name": "dry rice",
+          "quantity": 75,
+          "unit": "g"
+        },
+        {
+          "name": "light soy sauce",
+          "quantity": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "honey",
+          "quantity": 15,
+          "unit": "g"
+        },
+        {
+          "name": "sriracha",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "fresh ginger",
+          "quantity": 5,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "rice vinegar",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "water",
+          "quantity": 25,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Rinse the rice and cook it following the packet instructions."
+        },
+        {
+          "step": 2,
+          "instruction": "Stir together soy sauce, honey, sriracha, garlic, ginger, vinegar, sesame oil and water."
+        },
+        {
+          "step": 3,
+          "instruction": "Heat neutral oil in a frying pan over medium-high heat and cook chicken for 6–8 minutes until cooked through."
+        },
+        {
+          "step": 4,
+          "instruction": "Add the sauce; bubble for 2–3 minutes, tossing until thick and sticky."
+        },
+        {
+          "step": 5,
+          "instruction": "Spoon the chicken and glaze over the cooked rice."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 3
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "crispy-garlic-cajun-chicken-quesadillas",
+      "title": "Crispy Garlic & Cajun Chicken Quesadillas",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 15,
+      "cook_minutes": 20,
+      "difficulty": "easy",
+      "category": "wraps",
+      "tags": [
+        "chicken",
+        "Cajun-inspired",
+        "cheesy"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 375,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "large flour tortillas",
+          "quantity": 4,
+          "unit": "tortillas"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 120,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "onion",
+          "quantity": 80,
+          "unit": "g",
+          "preparation": "finely diced"
+        },
+        {
+          "name": "bell pepper",
+          "quantity": 150,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "Cajun seasoning",
+          "quantity": 2,
+          "unit": "tsp"
+        },
+        {
+          "name": "smoked paprika",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Season chicken with Cajun seasoning, paprika and salt."
+        },
+        {
+          "step": 2,
+          "instruction": "Heat half the oil in a frying pan over medium-high heat. Cook chicken for 6–8 minutes until cooked through; set aside."
+        },
+        {
+          "step": 3,
+          "instruction": "Add the remaining oil and cook onion and pepper for 3–4 minutes. Add garlic for 30 seconds, then return chicken to pan."
+        },
+        {
+          "step": 4,
+          "instruction": "Divide filling and cheddar between tortillas and fold over."
+        },
+        {
+          "step": 5,
+          "instruction": "In a dry frying pan over medium heat, cook each folded quesadilla 2–3 minutes per side until golden and the cheese melts. Cut into wedges."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 4
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "crispy-buffalo-chicken-baguette",
+      "title": "Crispy Buffalo Chicken Baguette",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "sandwiches",
+      "tags": [
+        "chicken",
+        "buffalo",
+        "crispy"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 200,
+          "unit": "g",
+          "preparation": "sliced into strips"
+        },
+        {
+          "name": "plain flour",
+          "quantity": 20,
+          "unit": "g"
+        },
+        {
+          "name": "paprika",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Frank’s RedHot sauce",
+          "quantity": 30,
+          "unit": "g"
+        },
+        {
+          "name": "butter",
+          "quantity": 15,
+          "unit": "g"
+        },
+        {
+          "name": "Worcestershire sauce",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "honey",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "baguette",
+          "quantity": 1,
+          "unit": "baguette"
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": 20,
+          "unit": "g"
+        },
+        {
+          "name": "plain yoghurt",
+          "quantity": 15,
+          "unit": "g"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "lettuce",
+          "quantity": 30,
+          "unit": "g",
+          "preparation": "shredded"
+        },
+        {
+          "name": "red onion",
+          "quantity": 25,
+          "unit": "g",
+          "preparation": "sliced"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Toss chicken with flour, paprika, garlic powder, salt and pepper."
+        },
+        {
+          "step": 2,
+          "instruction": "Heat oil in a frying pan on medium-high (around 7/9 induction). Fry chicken for 3–4 minutes per side until crisp and cooked through."
+        },
+        {
+          "step": 3,
+          "instruction": "On low heat, melt butter with Frank’s sauce, Worcestershire and optional honey; toss chicken through the glaze."
+        },
+        {
+          "step": 4,
+          "instruction": "Mix mayonnaise, yoghurt and lemon juice into a dressing."
+        },
+        {
+          "step": 5,
+          "instruction": "Split the baguette, spread on dressing and layer in lettuce, onion and buffalo chicken."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 5
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "hot-honey-buffalo-chicken-baguette",
+      "title": "Hot Honey Buffalo Chicken Baguette",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "sandwiches",
+      "tags": [
+        "chicken",
+        "buffalo",
+        "hot honey"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 200,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "paprika",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "onion powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "cayenne pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "Frank’s RedHot sauce",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "honey",
+          "quantity": 10,
+          "unit": "g"
+        },
+        {
+          "name": "red onion",
+          "quantity": 25,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "sweetcorn",
+          "quantity": 20,
+          "unit": "g"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 30,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "dried oregano",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "baguette",
+          "quantity": 1,
+          "unit": "baguette"
+        },
+        {
+          "name": "butter",
+          "quantity": 5,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Toss chicken with paprika, onion powder, garlic powder, cayenne, pepper and salt."
+        },
+        {
+          "step": 2,
+          "instruction": "Heat oil in a pan over medium-high heat and cook chicken for 6–8 minutes until cooked through."
+        },
+        {
+          "step": 3,
+          "instruction": "Add onion and sweetcorn and cook for 2–3 minutes until softened."
+        },
+        {
+          "step": 4,
+          "instruction": "Stir in hot sauce, honey and optional butter. Toss for 1–2 minutes to coat the chicken."
+        },
+        {
+          "step": 5,
+          "instruction": "Split the baguette, add filling and top with grated cheddar and oregano; briefly warm in the air fryer if you want the cheese melted."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 7
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "creamy-cajun-chicken-pasta",
+      "title": "Creamy Cajun Chicken Pasta",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 10,
+      "cook_minutes": 25,
+      "difficulty": "easy",
+      "category": "pasta",
+      "tags": [
+        "chicken",
+        "Cajun-inspired",
+        "creamy"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 375,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "dry pasta",
+          "quantity": 220,
+          "unit": "g"
+        },
+        {
+          "name": "single cream",
+          "quantity": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "reserved pasta water",
+          "quantity": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "garlic",
+          "quantity": 4,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "Cajun seasoning",
+          "quantity": 3,
+          "unit": "tsp"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 50,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "onion",
+          "quantity": 75,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "red pepper",
+          "quantity": 100,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "tomato purée",
+          "quantity": 15,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Cook pasta in salted water until just tender, reserving 100 ml cooking water."
+        },
+        {
+          "step": 2,
+          "instruction": "Coat chicken in most of the Cajun seasoning. Fry in oil over medium-high heat for 6–8 minutes until cooked through; remove."
+        },
+        {
+          "step": 3,
+          "instruction": "Add onion and pepper to the pan and cook 3–4 minutes. Add garlic, tomato purée and remaining Cajun seasoning for 30 seconds."
+        },
+        {
+          "step": 4,
+          "instruction": "Lower the heat, add cream and reserved pasta water, and simmer gently for 2 minutes."
+        },
+        {
+          "step": 5,
+          "instruction": "Return chicken, stir in cheddar until melted and toss through the drained pasta. Adjust thickness with a little water if needed."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 8
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "creamy-buffalo-chicken-pasta",
+      "title": "Creamy Buffalo Chicken Pasta",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 10,
+      "cook_minutes": 25,
+      "difficulty": "easy",
+      "category": "pasta",
+      "tags": [
+        "chicken",
+        "buffalo",
+        "creamy",
+        "spicy"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "dry pasta",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "name": "chicken breast",
+          "quantity": 300,
+          "unit": "g",
+          "preparation": "diced"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "smoked paprika",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "butter",
+          "quantity": 15,
+          "unit": "g"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "tomato purée",
+          "quantity": 15,
+          "unit": "g"
+        },
+        {
+          "name": "Frank’s RedHot sauce",
+          "quantity": 75,
+          "unit": "ml"
+        },
+        {
+          "name": "double cream",
+          "quantity": 150,
+          "unit": "ml"
+        },
+        {
+          "name": "Worcestershire sauce",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 40,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "reserved pasta water",
+          "quantity": 50,
+          "unit": "ml"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Boil pasta in salted water until al dente. Reserve at least 150 ml pasta water before draining."
+        },
+        {
+          "step": 2,
+          "instruction": "Season the chicken with smoked paprika, garlic powder, salt and pepper."
+        },
+        {
+          "step": 3,
+          "instruction": "Heat olive oil in a frying pan and cook chicken for 6–8 minutes until browned and cooked through; transfer to a plate."
+        },
+        {
+          "step": 4,
+          "instruction": "Reduce heat. Melt butter, soften garlic for 30 seconds and stir in tomato purée."
+        },
+        {
+          "step": 5,
+          "instruction": "Add Frank’s sauce, cream, Worcestershire and 50 ml pasta water; heat gently without boiling hard."
+        },
+        {
+          "step": 6,
+          "instruction": "Return chicken and stir in cheese, then toss with pasta. Add more reserved pasta water as needed."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 9
+      },
+      "notes": "Some amounts, including chicken and cheese, were reconstructed because the retrieved original was incomplete.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "20-minute-spaghetti-bolognese",
+      "title": "20-Minute Spaghetti Bolognese",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 5,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "pasta",
+      "tags": [
+        "beef",
+        "Italian-inspired",
+        "quick"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "dry spaghetti",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "name": "beef mince",
+          "quantity": 250,
+          "unit": "g"
+        },
+        {
+          "name": "onion",
+          "quantity": 75,
+          "unit": "g",
+          "preparation": "finely diced"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "passata",
+          "quantity": 250,
+          "unit": "g"
+        },
+        {
+          "name": "tomato purée",
+          "quantity": 20,
+          "unit": "g"
+        },
+        {
+          "name": "olive oil",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "dried oregano",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "Worcestershire sauce",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Bring a pot of salted water to the boil and cook spaghetti according to the packet."
+        },
+        {
+          "step": 2,
+          "instruction": "Meanwhile, heat oil in a frying pan over medium-high heat and brown mince for 5 minutes, breaking it up."
+        },
+        {
+          "step": 3,
+          "instruction": "Add onion and cook for 2–3 minutes, then garlic and tomato purée for 30 seconds."
+        },
+        {
+          "step": 4,
+          "instruction": "Stir in passata, oregano and Worcestershire. Simmer for 5–7 minutes while the pasta finishes."
+        },
+        {
+          "step": 5,
+          "instruction": "Season and toss with drained spaghetti, loosening with a splash of pasta water if needed."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "reconstructed",
+        "original_list_number": 12
+      },
+      "notes": "Earlier exact 20-minute version could not be recovered; this is a new reconstruction using passata rather than tinned tomatoes.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "creamy-garlic-sausage-pasta",
+      "title": "Creamy Garlic & Sausage Pasta",
+      "description": "",
+      "default_servings": 1,
+      "prep_minutes": 10,
+      "cook_minutes": 20,
+      "difficulty": "easy",
+      "category": "pasta",
+      "tags": [
+        "sausage",
+        "garlic",
+        "creamy"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "dry pasta",
+          "quantity": 125,
+          "unit": "g"
+        },
+        {
+          "name": "sausages",
+          "quantity": 3,
+          "unit": "sausages"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "onion",
+          "quantity": 50,
+          "unit": "g",
+          "preparation": "finely diced"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "single cream",
+          "quantity": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "reserved pasta water",
+          "quantity": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Parmesan",
+          "quantity": 25,
+          "unit": "g",
+          "preparation": "finely grated"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "Dijon mustard",
+          "quantity": 0.5,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Cook pasta in salted water until al dente; reserve some cooking water."
+        },
+        {
+          "step": 2,
+          "instruction": "Remove sausage meat from casings if desired. Brown in oil in a frying pan for 6–8 minutes until cooked through."
+        },
+        {
+          "step": 3,
+          "instruction": "Add diced onion and soften for 3 minutes, then add garlic for 30 seconds."
+        },
+        {
+          "step": 4,
+          "instruction": "Reduce heat, add cream and 40 ml pasta water and return sausage pieces to the sauce."
+        },
+        {
+          "step": 5,
+          "instruction": "Turn off heat and stir in Parmesan and optional Dijon. Toss pasta through and season with black pepper."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 13
+      },
+      "notes": "",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "stovetop-mac-and-cheese",
+      "title": "Stovetop Mac and Cheese",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 10,
+      "cook_minutes": 20,
+      "difficulty": "easy",
+      "category": "pasta",
+      "tags": [
+        "cheese",
+        "vegetarian",
+        "comfort food",
+        "no oven"
+      ],
+      "equipment": [
+        "hob",
+        "pot",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "dry macaroni",
+          "quantity": 200,
+          "unit": "g"
+        },
+        {
+          "name": "butter",
+          "quantity": 25,
+          "unit": "g"
+        },
+        {
+          "name": "plain flour",
+          "quantity": 25,
+          "unit": "g"
+        },
+        {
+          "name": "milk",
+          "quantity": 400,
+          "unit": "ml"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 140,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "mozzarella",
+          "quantity": 40,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "paprika",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "breadcrumbs",
+          "quantity": 35,
+          "unit": "g",
+          "preparation": "optional topping"
+        },
+        {
+          "name": "butter",
+          "quantity": 10,
+          "unit": "g",
+          "preparation": "optional topping"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.25,
+          "unit": "tsp",
+          "preparation": "optional topping"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Boil macaroni in salted water until just tender and drain."
+        },
+        {
+          "step": 2,
+          "instruction": "In a saucepan, melt 25 g butter over medium-low heat. Add garlic and cook for 30 seconds."
+        },
+        {
+          "step": 3,
+          "instruction": "Stir in flour and cook for 1 minute. Gradually whisk in milk until smooth; simmer gently for 3–5 minutes until thickened."
+        },
+        {
+          "step": 4,
+          "instruction": "Add paprika and black pepper. Turn off heat and stir in cheddar and mozzarella until melted, then fold in macaroni."
+        },
+        {
+          "step": 5,
+          "instruction": "For optional crunchy topping, melt the additional 10 g butter in a frying pan and toast breadcrumbs with garlic powder until golden. Scatter over the macaroni."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "based_on_retrieved_recipe",
+        "original_list_number": 15
+      },
+      "notes": "Macaroni and cheese weights were reconstructed; retrieved original confirmed butter, flour, milk and method.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "crispy-garlic-paprika-potatoes",
+      "title": "Crispy Garlic & Paprika Potatoes",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 10,
+      "cook_minutes": 25,
+      "difficulty": "easy",
+      "category": "sides",
+      "tags": [
+        "potato",
+        "crispy",
+        "hob"
+      ],
+      "equipment": [
+        "hob",
+        "pot",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "potatoes",
+          "quantity": 500,
+          "unit": "g",
+          "preparation": "cut into 2 cm chunks"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "butter",
+          "quantity": 10,
+          "unit": "g"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "smoked paprika",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "garlic powder",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.5,
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Put potato chunks in a pot of cold salted water. Bring to a boil and simmer for 8–10 minutes until just fork-tender."
+        },
+        {
+          "step": 2,
+          "instruction": "Drain and let steam-dry for 2 minutes. Shake the pot gently to roughen the edges."
+        },
+        {
+          "step": 3,
+          "instruction": "Heat oil in a frying pan over medium-high heat. Add potatoes in a single layer and fry for 10–12 minutes, turning periodically until golden and crisp."
+        },
+        {
+          "step": 4,
+          "instruction": "Lower heat, add butter, garlic, smoked paprika, garlic powder and pepper. Toss for 45–60 seconds so the garlic does not burn."
+        },
+        {
+          "step": 5,
+          "instruction": "Season to taste and serve immediately."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "reconstructed",
+        "original_list_number": 17
+      },
+      "notes": "The original exact potato recipe was unavailable; reconstructed from our discussion of boiled then fried paprika potatoes.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "garlic-butter-for-steak",
+      "title": "Garlic Butter for Steak",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 5,
+      "cook_minutes": 3,
+      "difficulty": "easy",
+      "category": "sauces",
+      "tags": [
+        "steak accompaniment",
+        "garlic",
+        "butter"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan"
+      ],
+      "ingredients": [
+        {
+          "name": "unsalted butter",
+          "quantity": 40,
+          "unit": "g"
+        },
+        {
+          "name": "garlic",
+          "quantity": 2,
+          "unit": "cloves",
+          "preparation": "finely minced"
+        },
+        {
+          "name": "fresh parsley",
+          "quantity": 5,
+          "unit": "g",
+          "preparation": "chopped"
+        },
+        {
+          "name": "black pepper",
+          "quantity": 0.25,
+          "unit": "tsp"
+        },
+        {
+          "name": "salt",
+          "quantity": 0.125,
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Melt butter over low heat in a small pan or in the steak pan once it is no longer smoking hot."
+        },
+        {
+          "step": 2,
+          "instruction": "Add minced garlic and cook gently for 30–60 seconds without browning."
+        },
+        {
+          "step": 3,
+          "instruction": "Stir in parsley, pepper and a pinch of salt."
+        },
+        {
+          "step": 4,
+          "instruction": "Spoon over rested steak immediately before serving."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "reconstructed",
+        "original_list_number": 18
+      },
+      "notes": "Exact original garlic butter recipe was not recoverable.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "southern-fried-chicken-burgers",
+      "title": "Southern Fried Chicken Burgers",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 15,
+      "cook_minutes": 20,
+      "difficulty": "easy",
+      "category": "sandwiches",
+      "tags": [
+        "chicken",
+        "burger",
+        "air fryer"
+      ],
+      "equipment": [
+        "air_fryer"
+      ],
+      "ingredients": [
+        {
+          "name": "southern fried breaded chicken fillets",
+          "quantity": 2,
+          "unit": "fillets"
+        },
+        {
+          "name": "burger buns",
+          "quantity": 2,
+          "unit": "buns"
+        },
+        {
+          "name": "cheddar",
+          "quantity": 2,
+          "unit": "slices"
+        },
+        {
+          "name": "lettuce",
+          "quantity": 40,
+          "unit": "g",
+          "preparation": "shredded"
+        },
+        {
+          "name": "red onion",
+          "quantity": 40,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "Frank’s RedHot sauce",
+          "quantity": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "butter",
+          "quantity": 10,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Preheat air fryer to 200°C."
+        },
+        {
+          "step": 2,
+          "instruction": "Air-fry breaded chicken fillets according to their packaging, turning if advised, until piping hot and cooked through. Check that the centre reaches 75°C if using raw chicken products."
+        },
+        {
+          "step": 3,
+          "instruction": "Melt butter and mix with Frank’s RedHot. Toss or brush cooked chicken lightly with buffalo butter."
+        },
+        {
+          "step": 4,
+          "instruction": "Warm burger buns in the air fryer for 1 minute if desired."
+        },
+        {
+          "step": 5,
+          "instruction": "Assemble buns with lettuce, onion, chicken and cheddar. Serve immediately."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "reconstructed",
+        "original_list_number": 19
+      },
+      "notes": "Based on earlier chat involving ready-made southern fried chicken fillets and buns; cooking duration must follow the product package.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    },
+    {
+      "id": "chicken-stir-fry",
+      "title": "Chicken Stir-Fry",
+      "description": "",
+      "default_servings": 2,
+      "prep_minutes": 15,
+      "cook_minutes": 15,
+      "difficulty": "easy",
+      "category": "stir-fry",
+      "tags": [
+        "chicken",
+        "vegetables",
+        "Asian-inspired",
+        "quick"
+      ],
+      "equipment": [
+        "hob",
+        "frying_pan",
+        "pot"
+      ],
+      "ingredients": [
+        {
+          "name": "chicken breast",
+          "quantity": 300,
+          "unit": "g",
+          "preparation": "thinly sliced"
+        },
+        {
+          "name": "broccoli",
+          "quantity": 150,
+          "unit": "g",
+          "preparation": "small florets"
+        },
+        {
+          "name": "bell pepper",
+          "quantity": 150,
+          "unit": "g",
+          "preparation": "sliced"
+        },
+        {
+          "name": "carrot",
+          "quantity": 100,
+          "unit": "g",
+          "preparation": "thinly sliced"
+        },
+        {
+          "name": "garlic",
+          "quantity": 3,
+          "unit": "cloves",
+          "preparation": "minced"
+        },
+        {
+          "name": "fresh ginger",
+          "quantity": 10,
+          "unit": "g",
+          "preparation": "grated"
+        },
+        {
+          "name": "neutral oil",
+          "quantity": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "light soy sauce",
+          "quantity": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "oyster sauce",
+          "quantity": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "rice vinegar",
+          "quantity": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "water",
+          "quantity": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "cornflour",
+          "quantity": 1,
+          "unit": "tsp"
+        },
+        {
+          "name": "sesame oil",
+          "quantity": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "dry rice",
+          "quantity": 150,
+          "unit": "g"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "instruction": "Cook rice according to the packet instructions."
+        },
+        {
+          "step": 2,
+          "instruction": "Mix soy sauce, oyster sauce, vinegar, water and cornflour in a bowl."
+        },
+        {
+          "step": 3,
+          "instruction": "Heat half the oil in a large frying pan over high heat and stir-fry chicken for 5–6 minutes until cooked through; remove."
+        },
+        {
+          "step": 4,
+          "instruction": "Add remaining oil, broccoli, pepper and carrot. Stir-fry for 4–5 minutes, adding a splash of water if needed."
+        },
+        {
+          "step": 5,
+          "instruction": "Add garlic and ginger for 30 seconds. Return chicken and add sauce; cook for 1–2 minutes until thickened."
+        },
+        {
+          "step": 6,
+          "instruction": "Finish with sesame oil and serve over the rice."
+        }
+      ],
+      "source": {
+        "type": "chatgpt_conversation",
+        "fidelity": "reconstructed",
+        "original_list_number": 25
+      },
+      "notes": "Generic chicken stir-fry reconstructed because no original full recipe could be recovered.",
+      "favourite": false,
+      "feedback": null,
+      "rating": null
+    }
+  ]
+}
