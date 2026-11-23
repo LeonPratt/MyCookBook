@@ -19,7 +19,7 @@ Browser API requests must use the same Origin (scheme, host and effective port).
 | DELETE `/history/{id}` | Remove one meal record |
 | GET `/shopping` | Persisted list |
 | POST `/shopping` | `{name, quantity?, unit?, preparation?, category?, checked?}` |
-| POST `/recipes/{id}/shopping` | `{servings?, include_optional?: false, include_staples?: false}`; aggregate scaled ingredients, skipping saved cupboard staples by default |
+| POST `/recipes/{id}/shopping` | `{servings?, include_optional?: false, include_staples?: false, exclude_ingredient_indices?: []}`; aggregate scaled ingredients, skipping checked ingredient rows (zero-based indices) and saved cupboard staples by default. Indices must be integers within the recipe's ingredient list. |
 | POST `/shopping/{id}/staple` | Save the item's ingredient name to cupboard staples and remove its matching unchecked shopping entries; returns updated shopping list |
 | PATCH `/shopping/{id}` | `{checked: boolean}` |
 | DELETE `/shopping/{id}` | Remove item |

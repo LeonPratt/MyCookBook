@@ -99,9 +99,33 @@ describe("portion scaling", () => {
           servings: 3,
           include_optional: false,
           include_staples: false,
+          exclude_ingredient_indices: [],
         }),
       }),
     );
     expect(recipe.ingredients[0].quantity).toBe(300);
+    const chicken = screen.getByRole("checkbox", { name: /chicken/ });
+    await user.click(chicken);
+    await user.click(
+      screen.getByRole("button", { name: "Add to shopping list" }),
+    );
+    expect(fetch).toHaveBeenLastCalledWith(
+      "/api/recipes/1/shopping",
+      expect.objectContaining({
+        body: JSON.stringify({
+          servings: 3,
+          include_optional: false,
+          include_staples: false,
+          exclude_ingredient_indices: [0],
+        }),
+      }),
+    );
+    await user.click(chicken);
+    await user.click(
+      screen.getByRole("button", { name: "Add to shopping list" }),
+    );
+    expect(
+      JSON.parse(fetch.mock.lastCall![1].body).exclude_ingredient_indices,
+    ).toEqual([]);
   });
 });

@@ -1,6 +1,6 @@
 import math
 from datetime import datetime, timezone
-from typing import Literal
+from typing import Annotated, Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
@@ -88,6 +88,9 @@ class RecipeShoppingInput(Schema):
     servings: float | None = Field(default=None, gt=0, le=1000)
     include_optional: bool = Field(default=False, strict=True)
     include_staples: bool = Field(default=False, strict=True)
+    exclude_ingredient_indices: list[Annotated[int, Field(strict=True, ge=0)]] = Field(
+        default_factory=list, max_length=500
+    )
 
 
 class SettingsInput(Schema):

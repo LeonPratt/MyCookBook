@@ -268,13 +268,18 @@ def manual_shopping():
 def recipe_shopping(recipe_id):
     recipe = get_recipe(recipe_id)
     data = RecipeShoppingInput.model_validate(body())
+    excluded = set(data.exclude_ingredient_indices)
+    if any(index >= len(recipe.content["ingredients"]) for index in excluded):
+        abort(422, description="Excluded ingredient index is outside this recipe")
     servings = (
         data.servings
         or recipe.personal.get("selected_servings")
         or recipe.content["servings"]
     )
     staples = {normalise(name) for name in get_settings()["shopping_staples"]}
-    for ingredient in recipe.content["ingredients"]:
+    for index, ingredient in enumerate(recipe.content["ingredients"]):
+        if index in excluded:
+            continue
         if ingredient.get("optional") and not data.include_optional:
             continue
         if not data.include_staples and normalise(ingredient["name"]) in staples:

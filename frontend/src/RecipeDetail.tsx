@@ -204,6 +204,10 @@ export default function RecipeDetail({
               Quantities scale. Times and method stay the same.
             </p>
             {checklist}
+            <p className="muted small-text">
+              Tick ingredients you already have to leave them off the shopping
+              list.
+            </p>
             <label className="inline-check">
               <input
                 type="checkbox"
@@ -234,6 +238,7 @@ export default function RecipeDetail({
                     servings,
                     include_optional: optional,
                     include_staples: includeStaples,
+                    exclude_ingredient_indices: checked,
                   });
                   notify("Ingredients added to your shopping list");
                 } catch (e) {
