@@ -220,8 +220,8 @@ def test_import_atomic_and_schema_errors(client, recipe):
 def test_pantry_and_recommendation_preferences(client, recipe):
     r = create(client, recipe)
     pantry = client.post("/api/pantry", json={"ingredients": ["chicken", "lemon"]}).json
-    assert pantry[0]["coverage"] == pytest.approx(2 / 3)
-    assert pantry[0]["missing"] == ["salt"]
+    assert pantry[0]["coverage"] == 1
+    assert pantry[0]["missing"] == []
     assert client.post("/api/pantry", json={"ingredients": [12]}).status_code == 422
     assert len(client.get("/api/recommendations").json) == 1
     client.patch(f"/api/recipes/{r['id']}/personal", json={"feedback": "negative"})

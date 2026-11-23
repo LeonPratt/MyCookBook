@@ -476,13 +476,17 @@ def pantry():
         or not all(isinstance(i, str) and len(i) <= 200 for i in values)
     ):
         abort(422, "ingredients must be a list of ingredient names")
+    staples = {normalise(name) for name in get_settings()["shopping_staples"]}
     results = []
     for r in db.session.scalars(db.select(Recipe)):
         required = [
             i["name"] for i in r.content["ingredients"] if not i.get("optional")
         ]
         matched = [
-            name for name in required if any(matches(name, value) for value in values)
+            name
+            for name in required
+            if normalise(name) in staples
+            or any(matches(name, value) for value in values)
         ]
         if matched:
             results.append(

@@ -26,7 +26,7 @@ Browser API requests must use the same Origin (scheme, host and effective port).
 | DELETE `/shopping/completed` | Clear checked items |
 | GET/PUT `/settings` | Preferences; PUT excludes read-only `llm_configured` |
 | GET `/recommendations` | Explainable ranked recipes; shared filters plus options below |
-| POST `/pantry` | `{ingredients: ["lemon", "chicken"]}`; matched/missing names and coverage |
+| POST `/pantry` | `{ingredients: ["lemon", "chicken"]}`; matched/missing names and coverage. Saved cupboard staples are automatically available using full normalized names; optional ingredients do not count toward coverage. |
 | GET `/export` | Versioned collection; `?backup=true` includes personal data, settings, shopping |
 | GET `/recipes/{id}/export` | Single recipe in a collection envelope |
 | POST `/import/preview` | `{data: objectOrArray}`; validation and duplicate candidates, no writes |
