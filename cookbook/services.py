@@ -296,21 +296,33 @@ def transfer_records(payload):
     return validated
 
 
+def title_key(title):
+    return title.strip().casefold()
+
+
 def duplicates(content):
     return [
         r
         for r in db.session.scalars(db.select(Recipe))
-        if normalise(r.content["title"]) == normalise(content["title"])
+        if title_key(r.content["title"]) == title_key(content["title"])
     ]
 
 
-def import_records(records, actions, restore_personal=False):
+def import_records(records, actions, restore_personal=False, renames=None):
     # Validation and duplicate decisions happen before any database write.
     decisions = []
     seen = set()
+    renames = renames or {}
+    indices = {str(i) for i in range(len(records))}
+    if (set(actions) | set(renames)) - indices:
+        raise ValueError("Import decisions refer to an unknown recipe index")
+    reserved = {
+        title_key(r.content["title"])
+        for r in db.session.scalars(db.select(Recipe))
+    }
     for index, record in enumerate(records):
         candidates = duplicates(record["content"])
-        title = normalise(record["content"]["title"])
+        title = title_key(record["content"]["title"])
         action = actions.get(
             str(index), "skip" if candidates or title in seen else "separate"
         )
@@ -318,8 +330,20 @@ def import_records(records, actions, restore_personal=False):
             raise ValueError("Import action must be skip, separate or replace")
         if action == "replace" and len(candidates) != 1:
             raise ValueError("Replace requires exactly one matching existing recipe")
+        if action == "separate":
+            renamed = renames.get(str(index), record["content"]["title"])
+            renamed_key = title_key(renamed)
+            if (candidates or title in seen) and renamed_key == title:
+                raise ValueError("Keeping both recipes requires a different recipe name")
+            record = {**record, "content": {**record["content"], "title": renamed}}
         decisions.append((record, action, candidates))
         seen.add(title)
+    for record, action, _ in decisions:
+        if action == "separate":
+            key = title_key(record["content"]["title"])
+            if key in reserved:
+                raise ValueError("Choose a unique recipe name; that name is already in use")
+            reserved.add(key)
     count = 0
     for record, action, candidates in decisions:
         if action == "skip":

@@ -166,6 +166,7 @@ def test_import_roundtrip_duplicates_and_preservation(client, recipe):
             json={
                 "data": exported,
                 "actions": {"0": "separate"},
+                "renames": {"0": "Lemon chicken variation"},
                 "restore_personal": True,
             },
         ).json["imported"]

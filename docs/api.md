@@ -29,8 +29,8 @@ Browser API requests must use the same Origin (scheme, host and effective port).
 | POST `/pantry` | `{ingredients: ["lemon", "chicken"]}`; matched/missing names and coverage. Saved cupboard staples are automatically available using full normalized names; optional ingredients do not count toward coverage. |
 | GET `/export` | Versioned collection; `?backup=true` includes personal data, settings, shopping |
 | GET `/recipes/{id}/export` | Single recipe in a collection envelope |
-| POST `/import/preview` | `{data: objectOrArray}`; validation and duplicate candidates, no writes |
-| POST `/import` | `{data, actions?: {"0":"skip|separate|replace"}, restore_personal?:false, restore_settings?:false}` |
+| POST `/import/preview` | `{data: objectOrArray}`; validation, existing duplicate candidates and earlier matching `duplicate_indices` within this batch, no writes |
+| POST `/import` | `{data, actions?: {"0":"skip|separate|replace"}, renames?: {"0":"New unique name"}, restore_personal?:false, restore_settings?:false}` |
 | POST `/import/text` | `{text, use_llm?:false}`; validated extraction, never saves |
 | POST `/images` | multipart `image` JPEG/PNG/WebP; validates/re-encodes and returns safe local image_path |
 | POST/DELETE `/demo` | Load/remove marked demonstration recipes |
@@ -39,7 +39,9 @@ Browser API requests must use the same Origin (scheme, host and effective port).
 
 Recommendations accept the same filters plus `exclude_disliked=true`, `include_cooked=true`, `prioritise_favourites=true`, `not_recent=true`, and `surprise=false`. Settings exclusions/equipment are applied first. Score = rating (or 0), minus 10 for disliked, plus 10 for a prioritised favourite, plus up to 9 for days since cooked (90 days or never cooked). Ties sort by title. Surprise selects up to three randomly from the top 20; regular suggestions return up to six. Dietary exclusions use documented ingredient keyword sets for vegetarian/vegan/dairy-free/gluten-free plus tag matches; this is a convenience filter, not allergen certification.
 
-Import validates the entire input before mutation. Default duplicate action is skip, otherwise separate. Duplicate detection uses normalized exact title matching, intentionally conservative about possible duplicates. Replace requires exactly one existing match and preserves personal data/history even during restoration. New records can restore personal metadata/history when explicitly requested. `restore_settings` replaces settings and shopping only when the payload includes a versioned backup; use full archive restore for exact database/photo recovery.
+Import validates the entire input and all final names before mutation. New recipes import automatically; duplicate names default to skip. Titles match exactly after trimming leading/trailing whitespace and ignoring case; punctuation and word order remain significant. This also detects repeated names within a batch. Keeping both (`separate`) requires a `renames` entry with a different, unique name (1–200 characters) that conflicts with neither saved recipes nor another new recipe in the batch. Replace requires exactly one existing match and preserves personal data/history even during restoration. A conflict that arises after preview returns 422 without importing any recipes.
+
+The regular import UI imports recipes only and does not offer backup restoration. The API retains explicit `restore_personal`/`restore_settings` options for backward compatibility: new records can restore personal metadata/history when explicitly requested, and `restore_settings` replaces settings and shopping only when the payload includes a versioned backup. Use the archive restore script for exact database/photo recovery.
 
 Examples:
 

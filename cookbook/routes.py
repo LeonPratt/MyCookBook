@@ -15,6 +15,7 @@ from .schemas import (
     SettingsInput,
     ShoppingInput,
     RecipeShoppingInput,
+    ImportRequest,
 )
 from .services import (
     serialize,
@@ -25,6 +26,7 @@ from .services import (
     parse_text,
     transfer_records,
     duplicates,
+    title_key,
     import_records,
 )
 
@@ -549,6 +551,11 @@ def import_preview():
                 "index": i,
                 "recipe": r["content"],
                 "duplicates": [serialize(d) for d in duplicates(r["content"])],
+                "duplicate_indices": [
+                    j for j in range(i)
+                    if title_key(records[j]["content"]["title"])
+                    == title_key(r["content"]["title"])
+                ],
             }
             for i, r in enumerate(records)
         ]
@@ -557,13 +564,15 @@ def import_preview():
 
 @api.post("/import")
 def import_data():
-    data = body()
+    data = ImportRequest.model_validate(body()).model_dump()
     try:
         records = transfer_records(data.get("data"))
         actions = data.get("actions", {})
         if not isinstance(actions, dict):
             raise ValueError("actions must be an object")
-        count = import_records(records, actions, data.get("restore_personal") is True)
+        count = import_records(
+            records, actions, data["restore_personal"], data["renames"]
+        )
         # Collection restore is an explicit UI choice and merges recipes; content replacement retains existing personal data.
         payload = data.get("data")
         if (

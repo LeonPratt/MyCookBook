@@ -1,7 +1,14 @@
 import { useState } from "react";
 import { api } from "./api";
 import { Recipe, RecipeContent } from "./types";
-type Preview = { index: number; recipe: RecipeContent; duplicates: Recipe[] };
+type Preview = {
+  index: number;
+  recipe: RecipeContent;
+  duplicates: Recipe[];
+  duplicate_indices?: number[];
+};
+const isDuplicate = (row: Preview) =>
+  row.duplicates.length > 0 || (row.duplicate_indices?.length ?? 0) > 0;
 export default function ImportPanel({
   llm,
   onRecipe,
@@ -20,7 +27,13 @@ export default function ImportPanel({
     [data, setData] = useState<unknown>(null),
     [actions, setActions] = useState<Record<string, string>>({}),
     [busy, setBusy] = useState(false),
-    [restore, setRestore] = useState(false);
+    [renames, setRenames] = useState<Record<string, string>>({});
+  const needsName = (row: Preview) =>
+    isDuplicate(row) && actions[row.index] === "separate";
+  const invalidName = (row: Preview) =>
+    needsName(row) &&
+    (!renames[row.index]?.trim() ||
+      renames[row.index].trim().toLowerCase() === row.recipe.title.trim().toLowerCase());
   const review = async () => {
     setBusy(true);
     try {
@@ -39,11 +52,12 @@ export default function ImportPanel({
       });
       setData(parsed);
       setPreview(result);
+      setRenames({});
       setActions(
         Object.fromEntries(
           result.map((r) => [
             r.index,
-            r.duplicates.length ? "skip" : "separate",
+            isDuplicate(r) ? "skip" : "separate",
           ]),
         ),
       );
@@ -59,8 +73,9 @@ export default function ImportPanel({
       await api("/import", "POST", {
         data,
         actions,
-        restore_personal: restore,
-        restore_settings: restore,
+        renames: Object.fromEntries(
+          preview.filter(needsName).map((row) => [row.index, renames[row.index].trim()]),
+        ),
       });
       onDone();
     } catch (e) {
@@ -79,7 +94,7 @@ export default function ImportPanel({
             setPreview([]);
           }}
         >
-          JSON / backup
+          JSON
         </button>
         <button
           className={mode === "text" ? "active" : ""}
@@ -95,7 +110,7 @@ export default function ImportPanel({
         <>
           <p className="muted">
             {mode === "json"
-              ? "Import one recipe, a collection, or a MyCookBook backup. You’ll review duplicates before saving."
+              ? "Import one recipe or a collection. New recipes are added automatically after review; matching names need your decision."
               : "Paste a title, Servings: line, Ingredients heading and Method or Instructions heading. Missing quantities stay blank. You can edit the extraction before saving."}
           </p>
           {mode === "json" && (
@@ -167,6 +182,11 @@ export default function ImportPanel({
                 {row.recipe.ingredients.length} ingredients ·{" "}
                 {row.recipe.servings} portions
               </p>
+              {isDuplicate(row) ? <>
+              <p role="alert">
+                Duplicate name detected: “{row.recipe.title}” already exists
+                {row.duplicates.length ? " in your cookbook." : " in this import."}
+              </p>
               <label>
                 Import action
                 <select
@@ -175,7 +195,7 @@ export default function ImportPanel({
                     setActions({ ...actions, [row.index]: e.target.value })
                   }
                 >
-                  <option value="separate">Import as separate recipe</option>
+                  <option value="separate">Keep both (rename imported recipe)</option>
                   <option value="skip">Skip</option>
                   {row.duplicates.length === 1 && (
                     <option value="replace">
@@ -184,6 +204,20 @@ export default function ImportPanel({
                   )}
                 </select>
               </label>
+              {needsName(row) && (
+                <label>
+                  New name for imported recipe
+                  <input
+                    value={renames[row.index] ?? ""}
+                    maxLength={200}
+                    required
+                    aria-invalid={invalidName(row)}
+                    onChange={(e) => setRenames({ ...renames, [row.index]: e.target.value })}
+                  />
+                  {invalidName(row) && <small>Enter a different, unique recipe name.</small>}
+                </label>
+              )}
+              </> : <p>Will be imported as a new recipe.</p>}
               {row.duplicates.map((d) => (
                 <details key={d.id}>
                   <summary>Compare with “{d.title}”</summary>
@@ -215,19 +249,10 @@ export default function ImportPanel({
               ))}
             </div>
           ))}
-          <label className="inline-check">
-            <input
-              type="checkbox"
-              checked={restore}
-              onChange={(e) => setRestore(e.target.checked)}
-            />
-            Restore personal metadata for new recipes, plus settings and
-            shopping list from backup
-          </label>
           <p className="small-text muted">
-            For a complete replacement restore including photos, use the archive
-            backup script. This JSON import merges recipes; restoring settings
-            replaces your shopping list.
+            This imports recipes only. For a complete backup restore including
+            personal data, settings, shopping lists and photos, use the archive
+            restore script.
           </p>
           <div className="form-actions">
             <button className="button secondary" onClick={() => setPreview([])}>
@@ -235,7 +260,7 @@ export default function ImportPanel({
             </button>
             <button
               className="button"
-              disabled={busy}
+              disabled={busy || preview.some(invalidName)}
               onClick={() => void save()}
             >
               {busy ? "Importing…" : "Import selected recipes"}

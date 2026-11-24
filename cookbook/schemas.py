@@ -1,6 +1,6 @@
 import math
 from datetime import datetime, timezone
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal
 from pydantic import BaseModel, ConfigDict, Field, field_validator
 
 
@@ -8,6 +8,16 @@ class Schema(BaseModel):
     model_config = ConfigDict(
         extra="forbid", str_strip_whitespace=True, allow_inf_nan=False
     )
+
+
+class ImportRequest(Schema):
+    data: Any
+    actions: dict[str, Literal["skip", "separate", "replace"]] = Field(default_factory=dict)
+    renames: dict[str, Annotated[str, Field(min_length=1, max_length=200)]] = Field(
+        default_factory=dict
+    )
+    restore_personal: bool = Field(default=False, strict=True)
+    restore_settings: bool = Field(default=False, strict=True)
 
 
 class Ingredient(Schema):
