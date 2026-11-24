@@ -1,0 +1,28 @@
+[Unit]
+Description=MyCookBook authenticated MCP service
+After=network.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=leon
+Group=leon
+WorkingDirectory=/home/leon/apps/mycookbook/current
+EnvironmentFile=/home/leon/apps/mycookbook/shared/.env
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/home/leon/apps/mycookbook/current/.venv/bin/python -m mcp_server
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=30
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/leon/apps/mycookbook/shared
+TasksMax=32
+
+[Install]
+WantedBy=multi-user.target

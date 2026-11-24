@@ -1,0 +1,4 @@
+# The supported official SDK v1 line supplies FastMCP (v2 uses a different API).
+-r ../requirements-prod.txt
+mcp>=1.30,<2
+uvicorn>=0.31,<1
